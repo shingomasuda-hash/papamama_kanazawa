@@ -1,4 +1,4 @@
-import { CTA_URL } from "../constants";
+import { snsLinks } from "../constants";
 
 export function Footer() {
   return (
@@ -61,7 +61,7 @@ export function Footer() {
         <ul className="footer__sns">
           <li>
             <a
-              href={CTA_URL}
+              href={snsLinks.instagram}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -90,7 +90,7 @@ export function Footer() {
           </li>
           <li>
             <a
-              href={CTA_URL}
+              href={snsLinks.facebook}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -103,7 +103,7 @@ export function Footer() {
           </li>
           <li>
             <a
-              href={CTA_URL}
+              href={snsLinks.line}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LINE"

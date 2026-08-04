@@ -13,6 +13,13 @@ export const eventData = {
   openHours: [] as { day: string; time: string }[],
 };
 
+// フッターSNSリンク
+export const snsLinks = {
+  instagram: "https://www.instagram.com/papamamacars?igsh=MWlleHN0NXNoOWQwdQ==",
+  facebook: "https://www.facebook.com/share/1EiAyfkF6t/?mibextid=wwXIfr",
+  line: CTA_URL,
+};
+
 export const staffMembers = [
   {
     id: 1,
