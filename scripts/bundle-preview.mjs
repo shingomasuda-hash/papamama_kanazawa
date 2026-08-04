@@ -100,7 +100,7 @@ for (const file of imageFiles) {
   let img = sharp(file);
   const meta = await img.metadata();
   if (meta.width > 1400) img = img.resize(1400);
-  const buf = await img.webp({ quality: 78 }).toBuffer();
+  const buf = await img.webp({ quality: 86 }).toBuffer();
   totalWebp += buf.length;
   const dataUri = `data:image/webp;base64,${buf.toString("base64")}`;
   js = js.replaceAll(`"${url}"`, JSON.stringify(dataUri));
