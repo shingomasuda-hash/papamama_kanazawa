@@ -43,7 +43,7 @@ export function HeroSection() {
         src="/images/hero-vehicles.png"
         alt="PAPAMAMA CAR'Sのカスタム展示車両2台(ブラックSUVとベージュのバン)"
         width={590}
-        height={270}
+        height={248}
         className="hero__vehicles"
       />
     </section>
