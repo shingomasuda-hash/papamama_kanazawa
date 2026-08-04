@@ -1,0 +1,165 @@
+/* ---- レイアウト共通 ---- */
+.container {
+  width: 100%;
+  max-width: var(--width-content);
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+/* ---- セクションタイトル(英字アウトライン+日本語) ---- */
+.section-title {
+  text-align: center;
+}
+
+.section-title__en {
+  display: block;
+  font-family: var(--font-display);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.34);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.section-title--md .section-title__en {
+  font-size: clamp(40px, 13vw, 82px);
+}
+
+.section-title--lg .section-title__en {
+  font-size: clamp(52px, 17vw, 104px);
+}
+
+.section-title--xl .section-title__en {
+  font-size: clamp(64px, 22vw, 136px);
+}
+
+.section-title__ja {
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---- CTAボタン ---- */
+.cta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+  text-align: center;
+  color: #0a0a0a;
+  box-shadow: 3px 4px 0 rgba(0, 0, 0, 0.55);
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.cta:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.cta:active {
+  transform: translateY(1px);
+  box-shadow: 1px 2px 0 rgba(0, 0, 0, 0.55);
+}
+
+.cta--orange {
+  background: var(--color-orange);
+}
+
+.cta--lime {
+  background: var(--color-lime);
+}
+
+/* 右下の黒三角装飾つき大型CTA */
+.cta--arrow {
+  overflow: hidden;
+}
+
+.cta--arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-style: solid;
+  border-width: 0 0 34px 34px;
+  border-color: transparent transparent #0a0a0a transparent;
+}
+
+/* 横並びCTAペア */
+.cta-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.cta-pair .cta {
+  min-height: 52px;
+  font-size: 15px;
+  padding: 12px 8px;
+}
+
+/* ---- カルーセル共通UI ---- */
+.carousel {
+  position: relative;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-arrow--prev {
+  left: 6px;
+}
+
+.carousel-arrow--next {
+  right: 6px;
+}
+
+.carousel-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.carousel .swiper-pagination {
+  position: static;
+  margin-top: 18px;
+}
+
+.carousel .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  margin: 0 6px !important;
+  background: #d9d9d9;
+  opacity: 0.45;
+  transition: opacity 0.2s ease;
+}
+
+.carousel .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #f2f2f2;
+}

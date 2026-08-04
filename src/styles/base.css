@@ -1,0 +1,91 @@
+:root {
+  /* カラートークン(元デザインからサンプリング) */
+  --color-black: #0a0a0a;
+  --color-dark: #1e1e1e;
+  --color-dark-2: #262626;
+  --color-gray-card: #4f4f4f;
+  --color-white: #ffffff;
+  --color-lime: #a8cf45;
+  --color-lime-bright: #b5d334;
+  --color-orange: #f97316;
+  --color-orange-deep: #ff6b00;
+  --color-olive: #97a86b;
+  --color-olive-deep: #8fa554;
+  --color-beige: #c9a35f;
+  --color-branch: #d9822b;
+
+  --font-jp: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    "Yu Gothic", sans-serif;
+  --font-display: "Anton", "Noto Sans JP", sans-serif;
+
+  --width-content: 640px;
+  --width-wide: 1160px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-black);
+  color: var(--color-white);
+  font-family: var(--font-jp);
+  font-weight: 500;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+dl,
+dd {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-lime);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

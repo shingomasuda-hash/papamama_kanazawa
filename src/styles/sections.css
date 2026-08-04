@@ -1,0 +1,966 @@
+/* =========================================
+   Header
+========================================= */
+.header {
+  background: var(--color-black);
+  display: flex;
+  justify-content: center;
+  padding: 28px 20px 8px;
+}
+
+.header__logo {
+  width: clamp(200px, 60vw, 240px);
+  height: auto;
+}
+
+/* =========================================
+   Hero
+========================================= */
+.hero {
+  background: linear-gradient(180deg, #191919 0%, #121212 55%, #0c0c0c 100%);
+  padding-top: 20px;
+  text-align: center;
+}
+
+.hero__badge {
+  font-size: clamp(14px, 4vw, 17px);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.hero__brand {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(38px, 11.2vw, 60px);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.hero__event {
+  font-size: clamp(17px, 5vw, 26px);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.hero__event em {
+  font-style: normal;
+  color: var(--color-orange);
+}
+
+.hero__decision {
+  font-size: clamp(40px, 12vw, 64px);
+  font-style: italic;
+  letter-spacing: 0.04em;
+  transform: skewX(-4deg);
+}
+
+.hero__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+  font-size: clamp(12px, 3.4vw, 16px);
+  font-weight: 700;
+}
+
+.hero__info-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.hero__info-item small {
+  font-size: 0.72em;
+}
+
+.hero__icon {
+  width: 1.2em;
+  height: 1.2em;
+  flex: none;
+}
+
+.hero__info-divider {
+  width: 1px;
+  align-self: stretch;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.hero__vehicles {
+  width: 100%;
+  max-width: var(--width-content);
+  margin: 10px auto 0;
+  aspect-ratio: 590 / 270;
+  object-fit: cover;
+}
+
+/* =========================================
+   塗装体験バナー(写真ストリップ)
+========================================= */
+.paint-banner {
+  background: var(--color-black);
+  padding: 26px 0 30px;
+}
+
+.paint-banner__inner {
+  display: flex;
+  align-items: stretch;
+  max-width: var(--width-content);
+  margin-inline: auto;
+}
+
+.paint-banner__copy {
+  flex: 0 0 27%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding-left: 16px;
+  font-size: clamp(11px, 3vw, 14px);
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.paint-banner__copy strong {
+  color: var(--color-lime);
+  font-size: clamp(19px, 5.4vw, 26px);
+  letter-spacing: 0.06em;
+}
+
+.paint-banner__photos {
+  flex: 1 1 auto;
+  min-width: 0;
+  object-fit: cover;
+  aspect-ratio: 422 / 172;
+}
+
+/* =========================================
+   ライムバンド+チケット+CTA
+========================================= */
+.ticket {
+  background: var(--color-black);
+  padding-bottom: 44px;
+}
+
+.ticket__band {
+  background: var(--color-lime-bright);
+  border-top: 6px solid var(--color-lime-bright);
+  border-bottom: 6px solid var(--color-lime-bright);
+  box-shadow: 0 -14px 0 -8px var(--color-lime-bright),
+    0 14px 0 -8px var(--color-lime-bright);
+  margin-block: 8px;
+}
+
+.ticket__band-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: var(--width-content);
+  margin-inline: auto;
+  padding: 16px 20px;
+}
+
+.ticket__band-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0a1a00;
+}
+
+.ticket__band-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex: none;
+  border-radius: 50%;
+  background: #0a0a0a;
+  color: var(--color-lime-bright);
+}
+
+.ticket__band-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.ticket__band-text {
+  font-size: clamp(12px, 3.3vw, 15px);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.ticket__band-text strong {
+  display: block;
+  font-size: clamp(17px, 4.8vw, 22px);
+  font-weight: 900;
+}
+
+.ticket__band-divider {
+  width: 1px;
+  height: 44px;
+  background: rgba(10, 10, 10, 0.55);
+}
+
+.ticket__present {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 26px;
+  padding: 14px 18px;
+  border: 2px solid #fff;
+  border-radius: 14px;
+  background: #0d0d0d;
+}
+
+.ticket__present-text {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ticket__present-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--color-orange);
+  color: #0a0a0a;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.ticket__present-copy {
+  font-size: clamp(14px, 3.9vw, 19px);
+  font-weight: 700;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+
+.ticket__present-copy strong {
+  font-size: 1.12em;
+  font-weight: 900;
+}
+
+.ticket__present-img {
+  width: clamp(84px, 23vw, 120px);
+  flex: none;
+}
+
+.ticket__cta {
+  margin-top: 30px;
+}
+
+/* =========================================
+   WHAT WE CAN
+========================================= */
+.wwc {
+  background: #232323;
+  padding: 72px 0 88px;
+}
+
+.wwc__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 22px;
+  margin-top: 44px;
+}
+
+.wwc__card img {
+  width: 100%;
+  aspect-ratio: 232 / 287;
+  object-fit: cover;
+}
+
+.wwc__cta {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 56px;
+}
+
+/* =========================================
+   MERIT
+========================================= */
+.merit {
+  background: #000;
+  padding: 72px 0 60px;
+}
+
+.merit__list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 44px;
+}
+
+.merit__card {
+  background: var(--color-gray-card);
+  padding: 26px 24px 22px;
+  margin-right: -20px;
+}
+
+.merit__heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+  font-size: clamp(16px, 4.4vw, 19px);
+  font-weight: 700;
+}
+
+.merit__no {
+  font-family: var(--font-display);
+  font-size: 1.6em;
+  font-style: italic;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.5);
+}
+
+.merit__body {
+  margin-top: 12px;
+  color: var(--color-lime);
+  font-size: clamp(13px, 3.6vw, 15px);
+  font-weight: 700;
+}
+
+/* =========================================
+   BOOTH
+========================================= */
+.booth {
+  background: #000;
+  padding: 88px 0 0;
+}
+
+.booth__inner {
+  max-width: var(--width-wide);
+  margin-inline: auto;
+}
+
+.booth .section-title {
+  margin-bottom: 48px;
+}
+
+.booth-carousel .booth-slide {
+  background: #000;
+}
+
+.booth-carousel .booth-slide img {
+  width: 100%;
+  aspect-ratio: 1633 / 1003;
+  object-fit: contain;
+  background: #000;
+}
+
+.booth-carousel .swiper-pagination {
+  margin-top: 14px;
+  padding-bottom: 8px;
+}
+
+/* =========================================
+   塗装体験セクション
+========================================= */
+.paint__top {
+  background:
+    linear-gradient(rgba(16, 20, 12, 0.55), rgba(16, 20, 12, 0.55)),
+    url("/images/forest-trees.png") center / cover;
+  padding: 64px 0 56px;
+}
+
+.paint__bottom {
+  background:
+    linear-gradient(rgba(215, 213, 205, 0.55), rgba(215, 213, 205, 0.55)),
+    url("/images/forest-1.png") center / cover;
+  color: #0a0a0a;
+  padding: 60px 0 72px;
+}
+
+.paint__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.paint__title-main {
+  position: relative;
+  padding: 6px 18px 10px;
+  background: #f4f4f0;
+  color: #0a0a0a;
+  font-size: clamp(24px, 7vw, 34px);
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  box-shadow: 0 6px 0 -2px var(--color-lime-bright);
+}
+
+.paint__title-sub {
+  padding: 6px 26px;
+  background: #519a3e;
+  color: #fff;
+  font-size: clamp(16px, 4.6vw, 21px);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.paint__suv {
+  width: min(100%, 550px);
+  margin: 30px auto 0;
+  aspect-ratio: 550 / 312;
+  object-fit: cover;
+}
+
+.paint__points {
+  margin-top: 18px;
+  transform: rotate(-4deg);
+  color: var(--color-orange);
+  font-size: clamp(16px, 4.6vw, 21px);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-align: center;
+  line-height: 1.9;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+.paint__overview-title {
+  text-align: center;
+  color: #0a0a0a;
+  font-size: clamp(26px, 7.4vw, 36px);
+  font-weight: 900;
+  letter-spacing: 0.2em;
+}
+
+.paint__overview {
+  margin-top: 28px;
+  background: #111;
+  color: #fff;
+  padding: 30px 26px;
+}
+
+.paint__overview dt {
+  color: var(--color-lime);
+  font-size: clamp(16px, 4.6vw, 20px);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.paint__overview dd {
+  margin: 8px 0 22px;
+  font-size: clamp(14px, 4vw, 17px);
+  font-weight: 700;
+}
+
+.paint__overview dd:last-child {
+  margin-bottom: 0;
+}
+
+.paint__overview dd strong {
+  font-size: 1.25em;
+  font-weight: 900;
+}
+
+.paint__cta {
+  margin-top: 34px;
+}
+
+.paint__safety {
+  margin-top: 56px;
+  background: rgba(10, 10, 10, 0.92);
+  color: #fff;
+  padding: 34px 26px 38px;
+}
+
+.paint__safety-title {
+  text-align: center;
+  font-size: clamp(26px, 7.4vw, 34px);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+}
+
+.paint__safety-points {
+  margin-top: 24px;
+  color: var(--color-lime);
+  font-size: clamp(16px, 4.6vw, 20px);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 2.1;
+}
+
+/* =========================================
+   ABOUT(イベント概要)
+========================================= */
+.about {
+  background: #262626;
+  padding: 88px 0 72px;
+}
+
+.about .section-title {
+  margin-bottom: 52px;
+}
+
+.about__item {
+  margin-bottom: 44px;
+}
+
+.about__heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-olive);
+  font-size: clamp(18px, 5vw, 22px);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.about__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--color-olive);
+  color: #262626;
+}
+
+.about__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.about__body {
+  padding-left: 52px;
+  font-size: clamp(14px, 4vw, 17px);
+  font-weight: 700;
+}
+
+.about__date {
+  font-size: 1.3em;
+  font-weight: 900;
+}
+
+.about__day-chip {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 2px 12px;
+  background: var(--color-olive-deep);
+  color: #fff;
+  font-size: 0.82em;
+  font-weight: 700;
+}
+
+.about__small {
+  margin-top: 6px;
+  font-size: 0.88em;
+  font-weight: 500;
+}
+
+.about__body > p + p:not(.about__day-chip) {
+  margin-top: 4px;
+}
+
+.about__contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 0.92em;
+}
+
+.about__contents li {
+  padding: 10px 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.about__contents li:nth-child(odd) {
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+  padding-right: 12px;
+}
+
+.about__contents li:nth-child(even) {
+  padding-left: 12px;
+}
+
+.about__contents li:nth-last-child(-n + 2) {
+  border-bottom: none;
+}
+
+.about__tags {
+  font-weight: 700;
+  line-height: 2;
+}
+
+/* =========================================
+   STAFF
+========================================= */
+.staff {
+  background: #000;
+  padding: 88px 0 64px;
+  overflow: hidden;
+}
+
+.staff__branch {
+  width: min(100%, var(--width-content));
+  margin: 36px auto -34px;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.staff__carousel-wrap {
+  max-width: var(--width-wide);
+  margin-inline: auto;
+}
+
+.staff-carousel {
+  padding-top: 14px;
+}
+
+.staff-carousel .staff-card {
+  margin: 0;
+}
+
+.staff-carousel .staff-card img {
+  width: 100%;
+  aspect-ratio: 638 / 816;
+  object-fit: contain;
+}
+
+.staff-carousel .carousel-arrow {
+  top: 58%;
+}
+
+/* =========================================
+   EXTERIOR
+========================================= */
+.exterior {
+  background:
+    linear-gradient(rgba(16, 18, 12, 0.45), rgba(16, 18, 12, 0.45)),
+    url("/images/forest-trees.png") center / cover;
+  padding: 72px 0 80px;
+}
+
+.exterior__van {
+  width: min(88%, 480px);
+  margin: 26px auto 0;
+  aspect-ratio: 480 / 330;
+  object-fit: contain;
+}
+
+.exterior__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px 26px;
+  margin-top: 28px;
+}
+
+.exterior__item--wide {
+  grid-column: 1 / -1;
+}
+
+.exterior__heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  font-size: clamp(15px, 4.2vw, 19px);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+}
+
+.exterior__no {
+  font-family: var(--font-display);
+  font-size: 2.4em;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.4px rgba(255, 255, 255, 0.75);
+}
+
+.exterior__swatches {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.exterior__swatch {
+  width: clamp(30px, 8.6vw, 42px);
+  aspect-ratio: 1;
+  border-radius: 8px;
+}
+
+.exterior__body {
+  margin-top: 12px;
+  font-size: clamp(13px, 3.7vw, 16px);
+  font-weight: 700;
+}
+
+/* =========================================
+   Flow
+========================================= */
+.flow {
+  background: #000;
+  padding: 88px 0 72px;
+}
+
+.flow__steps {
+  margin: 44px 0 0;
+  padding: 0 0 0 8px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.flow__step {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.flow__no {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 9.6vw, 46px);
+  font-style: italic;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.4px rgba(255, 255, 255, 0.55);
+}
+
+.flow__label {
+  font-size: clamp(16px, 4.6vw, 20px);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* =========================================
+   FAQ
+========================================= */
+.faq {
+  background: #000;
+  padding: 88px 0 72px;
+}
+
+.faq__list {
+  margin-top: 48px;
+}
+
+.faq__item {
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.faq__q {
+  color: var(--color-lime);
+  font-size: clamp(15px, 4.2vw, 18px);
+  font-weight: 900;
+}
+
+.faq__a {
+  margin-top: 10px;
+  font-size: clamp(14px, 4vw, 17px);
+  font-weight: 700;
+}
+
+/* =========================================
+   下部CTA
+========================================= */
+.cta-section {
+  background: #1c1c1c;
+  padding: 44px 0 48px;
+}
+
+/* =========================================
+   Footer
+========================================= */
+.footer {
+  background: #232323;
+  padding: 40px 0 36px;
+}
+
+.footer__logo {
+  width: clamp(240px, 70vw, 300px);
+  margin: 20px auto 44px;
+}
+
+.footer__shop {
+  margin-bottom: 30px;
+}
+
+.footer__shop-name {
+  color: var(--color-lime);
+  font-size: clamp(15px, 4.2vw, 18px);
+  font-weight: 900;
+}
+
+.footer__shop-info {
+  margin-top: 8px;
+  font-size: clamp(12px, 3.4vw, 14px);
+  font-weight: 700;
+}
+
+.footer__event {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 44px 0 0;
+  padding: 26px 24px;
+  background: #fff;
+  color: #0a0a0a;
+}
+
+.footer__event-name {
+  flex: 1;
+  padding-right: 20px;
+  border-right: 2px solid #b5b5b5;
+  font-size: clamp(17px, 4.8vw, 21px);
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+.footer__event-date {
+  flex: 1;
+  font-weight: 900;
+}
+
+.footer__event-year {
+  display: block;
+  font-size: clamp(14px, 4vw, 17px);
+}
+
+.footer__event-days {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: clamp(15px, 4.2vw, 18px);
+}
+
+.footer__event-days strong {
+  font-size: clamp(28px, 8vw, 38px);
+  line-height: 1;
+}
+
+.footer__event-day {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.66em;
+  font-weight: 700;
+}
+
+.footer__event-day--sat {
+  background: #2f6fb7;
+}
+
+.footer__event-day--sun {
+  background: #d43a3a;
+}
+
+.footer__follow {
+  margin-top: 48px;
+  font-size: clamp(16px, 4.6vw, 19px);
+  font-weight: 900;
+}
+
+.footer__sns {
+  display: flex;
+  justify-content: center;
+  gap: 34px;
+  margin-top: 26px;
+}
+
+.footer__sns-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  transition: opacity 0.15s ease;
+}
+
+.footer__sns-link:hover {
+  opacity: 0.75;
+}
+
+.footer__sns-link svg {
+  width: 30px;
+  height: 30px;
+}
+
+.footer__sns-link--line {
+  background: #fff;
+  color: #0a0a0a;
+  border-color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.footer__copyright {
+  margin-top: 44px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* =========================================
+   レスポンシブ(タブレット・PC)
+========================================= */
+@media (min-width: 768px) {
+  .booth-carousel,
+  .staff-carousel {
+    padding-inline: 24px;
+  }
+
+  .booth-carousel .carousel-arrow--prev,
+  .staff-carousel .carousel-arrow--prev {
+    left: 28px;
+  }
+
+  .booth-carousel .carousel-arrow--next,
+  .staff-carousel .carousel-arrow--next {
+    right: 28px;
+  }
+
+  .merit__card {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .booth-carousel {
+    max-width: 960px;
+    margin-inline: auto;
+  }
+}
