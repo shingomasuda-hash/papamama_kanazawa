@@ -138,11 +138,45 @@
   letter-spacing: 0.06em;
 }
 
+/* 3枚の写真を斜めの区切りで並べるストリップ */
 .paint-banner__photos {
   flex: 1 1 auto;
   min-width: 0;
-  object-fit: cover;
+  display: flex;
   aspect-ratio: 422 / 172;
+  overflow: hidden;
+}
+
+.paint-banner__photo {
+  flex: 1;
+  overflow: hidden;
+  transform: skewX(-10deg);
+  margin-right: 6px;
+}
+
+.paint-banner__photo:first-child {
+  margin-left: -14px;
+}
+
+.paint-banner__photo:last-child {
+  margin-right: -14px;
+}
+
+.paint-banner__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: skewX(10deg) scale(1.28);
+}
+
+/* 各スロットの見せたい位置(人物中心)に合わせる */
+.paint-banner__photo:nth-child(2) img {
+  object-position: center bottom;
+  transform-origin: center 78%;
+}
+
+.paint-banner__photo:nth-child(3) img {
+  object-position: 62% center;
 }
 
 /* =========================================
