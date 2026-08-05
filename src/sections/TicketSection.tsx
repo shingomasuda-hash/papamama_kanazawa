@@ -1,4 +1,5 @@
 import { PrimaryCta, SecondaryCta } from "../components/Cta";
+import { PAINT_CTA_URL } from "../constants";
 
 export function TicketSection() {
   return (
@@ -54,7 +55,7 @@ export function TicketSection() {
 
         <div className="cta-pair ticket__cta">
           <PrimaryCta>相談予約</PrimaryCta>
-          <SecondaryCta>塗装体験予約</SecondaryCta>
+          <SecondaryCta href={PAINT_CTA_URL}>塗装体験予約</SecondaryCta>
         </div>
       </div>
     </section>

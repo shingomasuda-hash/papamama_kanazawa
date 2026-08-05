@@ -1,6 +1,10 @@
-// 全CTA共通の遷移先URL(一元管理)
+// CTAの遷移先URL(一元管理)
+// 相談予約
 export const CTA_URL =
   "https://s.lmes.jp/landing-qr/2007227107-GgA3P6zw?uLand=4aqfEl";
+// 塗装体験予約
+export const PAINT_CTA_URL =
+  "https://s.lmes.jp/landing-qr/2007227107-GgA3P6zw?uLand=1oZNne";
 
 // イベント開催情報
 // ※メインデザイン画像から読み取れない項目は空文字にしておき、確定後に差し替える

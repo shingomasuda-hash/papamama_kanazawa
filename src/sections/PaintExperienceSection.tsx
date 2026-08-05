@@ -1,4 +1,5 @@
 import { PrimaryCta } from "../components/Cta";
+import { PAINT_CTA_URL } from "../constants";
 
 export function PaintExperienceSection() {
   return (
@@ -50,7 +51,7 @@ export function PaintExperienceSection() {
             </dl>
           </div>
 
-          <PrimaryCta arrow className="paint__cta">
+          <PrimaryCta arrow className="paint__cta" href={PAINT_CTA_URL}>
             LINEから予約
           </PrimaryCta>
 
