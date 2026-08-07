@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { Header } from "./sections/Header";
 import { HeroSection } from "./sections/HeroSection";
 import { PaintEventBanner } from "./sections/PaintEventBanner";
@@ -34,6 +35,7 @@ export default function App() {
         <CtaSection />
       </main>
       <Footer />
+      <Analytics />
     </>
   );
 }
